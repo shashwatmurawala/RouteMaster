@@ -1,5 +1,7 @@
 { pkgs }: {
     deps = [
+        pkgs.openssh_with_kerberos
+        pkgs.openssh_with_kerberos
         pkgs.python310Full
         pkgs.replitPackages.prybar-python310
         pkgs.replitPackages.stderred

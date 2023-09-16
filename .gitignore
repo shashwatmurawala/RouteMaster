@@ -3,3 +3,5 @@ cockroach-sql
 
 # misc
 .DS_Store
+
+replit.nix
