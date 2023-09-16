@@ -1,0 +1,28 @@
+﻿CouseCode,CourseName,CourseID,Prereq_1,Prereq_2,Prereq_3,Prereq_4,Coreq,Antireq,Programs,Restricted Programs,Minimum Term
+COMM 101,Introduction to Financial Markets,013541,,,,,,"AFM 121, CFM 101, BUS 283W",,,
+COMM 103,Principles of Economics,014062,,,,,,"ECON 101, 102",MCPA,,
+COMM 231,Commercial and Business Law for Mathematics Students,006938,,,,,,"AFM 231, LS 283, ECE 290, BUS 231W, CIVE 491, ENVS 201, GENE 411, ME 401, MTHEL 100",,,
+COMM 321,Intermediate Accounting for Finance,012745,"AFM 101, BUS 127W, BUS 227W",,,,,"AFM 291, BUS 387W",FARM,,
+COMM 400,"Entrepreneurship, Technology and the Emerging Information Economy",006943,,,,,,"BUS 440W, MTHEL 400",,,3A
+COMM 421,Financial Statement Analysis,012747,"COMM 321, BUS 387W",,,,ACTSC 372,"AFM 492, AFM 276, BUS 417W",FARM,,
+COMM 431,Project Management,012954,AFM 102,MSCI 211,,,,,,,3A
+COMM 432,Electronic Business,012955,"MGMT 244, ARBUS 302, BUS 352W","CS 330, CS 490",,,,AFM 443,,,3A
+COMM 433,Income Tax for Finance Students,015389,COMM 321,,,,,"AFM 361, BUS 357W",,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
