@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RouteMaster</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles copy.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <!-- <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/vendor.css"> -->
+</head>
+<body>
+    <script type="module" src="./script.js"></script>
+    <header>
+        <h1>RouteMaster</h1>
+    </header>
+    <div id="flex-select">
+        <div class="dropdown">
+            <p>University</p>
+            <select class="dropdown-menu" id="Uni">
+                <option value="UW">University of Waterloo</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <p>Faculty</p>
+            <select class="dropdown-menu" id="Fac">
+                <option value="Math">Mathematics</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <p>Program</p>
+            <select class="dropdown-menu" id="Prog">
+                <option value="Bmath">Bachelor of Mathematics</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <p>Co-op sequence</p>
+            <select class="dropdown-menu" id="Coop">
+                <option value="1">Sequence 1</option>
+                <option value="2">Sequence 2</option>
+                <option value="3">Sequence 3</option>
+                <option value="4">Sequence 4</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <p>Majors/Specialization</p>
+            <select class="dropdown-menu" id="Maj">
+                <option value="ACTSC">Actural Science</option>
+                <option value="AM">Applied Math</option>
+                <option value="BIOSTAT">Biostatistics</option>
+                <option value="CO">Combinatorics and Optimization</option>
+                <option value="CM">Computational Math</option>
+                <option value="DS">Data Science</option>
+                <option value="ME">Mathematical Economics</option>
+                <option value="MF">Mathematical Finance</option>
+                <option value="MO">Mathematical Optimization</option>
+                <option value="MP">Mathematical Physics</option>
+                <option value="MS">Mathematical Studies</option>
+                <option value="PM">Pure Mathematics</option>
+                <option value="STAT">Statistics</option>
+                <option value="MT">Mathematics/Teaching</option>
+            </select>
+        </div>
+    </div>
+    <div id="button">
+        <button id="butt">Get my schedule</button>
+    </div>
+
+    <!-- <div id="table_wrap">
+        <div class="table_col" id="col_1">
+            <div class="table_header">Fall 2023</div>
+        </div>
+        <div class="table_col" id="col_2">
+            <div class="table_header">Winter 2024</div>
+        </div>
+        <div class="table_col" id="col_3">
+            <div class="table_header">Spring 2024</div>
+        </div>
+        <div class="table_col" id="col_4">
+            <div class="table_header">Fall 2024</div>
+        </div>
+        <div class="table_col" id="col_5">
+            <div class="table_header">Winter 2025</div>
+        </div>
+        <div class="table_col" id="col_6">
+            <div class="table_header">Spring 2025</div>
+        </div>
+        <div class="table_col" id="col_7">
+            <div class="table_header">Fall 2025</div>
+        </div>
+        <div class="table_col" id="col_8">
+            <div class="table_header">Winter 2026</div>
+        </div>
+        <div class="table_col" id="col_9">
+            <div class="table_header">Spring 2026</div>
+        </div>
+        <div class="table_col" id="col_10">
+            <div class="table_header">Fall 2026</div>
+        </div>
+        <div class="table_col" id="col_11">
+            <div class="table_header">Winter 2027</div>
+        </div>
+        <div class="table_col" id="col_12">
+            <div class="table_header">Spring 2027</div>
+        </div>
+        <div class="table_col" id="col_13">
+            <div class="table_header">Fall 2027</div>
+        </div>
+        <div class="table_col" id="col_14">
+            <div class="table_header">Winter 2028</div>
+        </div>
+    </div> -->
+
+    <div class="parent">
+        <div class="table_header">Fall 2023</div>
+        <div class="table_header">Winter 2024</div>
+        <div class="table_header">Spring 2024</div>
+        <div class="table_header">Fall 2024</div>
+        <div class="table_header">Winter 2025</div>
+        <div class="table_header">Spring 2025</div>
+        <div class="table_header">Fall 2025</div>
+        <div class="table_header">Winter 2026</div>
+        <div class="table_header">Spring 2026</div>
+        <div class="table_header">Fall 2026</div>
+        <div class="table_header">Winter 2027</div>
+        <div class="table_header">Spring 2027</div>
+        <div class="table_header">Fall 2027</div>
+        <div class="table_header">Winter 2028</div>
+        <div class="table_cell" id="0,0"></div>
+        <div class="table_cell" id="1,0"></div>
+        <div class="table_cell" id="2,0"></div>
+        <div class="table_cell" id="3,0"></div>
+        <div class="table_cell" id="4,0"></div>
+        <div class="table_cell" id="5,0"></div>
+        <div class="table_cell" id="6,0"></div>
+        <div class="table_cell" id="7,0"></div>
+        <div class="table_cell" id="8,0"></div>
+        <div class="table_cell" id="9,0"></div>
+        <div class="table_cell" id="10,0"></div>
+        <div class="table_cell" id="11,0"></div>
+        <div class="table_cell" id="12,0"></div>
+        <div class="table_cell" id="13,0"></div>
+        <div class="table_cell" id="0,1"></div>
+        <div class="table_cell" id="1,1"></div>
+        <div class="table_cell" id="2,1"></div>
+        <div class="table_cell" id="3,1"></div>
+        <div class="table_cell" id="4,1"></div>
+        <div class="table_cell" id="5,1"></div>
+        <div class="table_cell" id="6,1"></div>
+        <div class="table_cell" id="7,1"></div>
+        <div class="table_cell" id="8,1"></div>
+        <div class="table_cell" id="9,1"></div>
+        <div class="table_cell" id="10,1"></div>
+        <div class="table_cell" id="11,1"></div>
+        <div class="table_cell" id="12,1"></div>
+        <div class="table_cell" id="13,1"></div>
+        <div class="table_cell" id="0,2"></div>
+        <div class="table_cell" id="1,2"></div>
+        <div class="table_cell" id="2,2"></div>
+        <div class="table_cell" id="3,2"></div>
+        <div class="table_cell" id="4,2"></div>
+        <div class="table_cell" id="5,2"></div>
+        <div class="table_cell" id="6,2"></div>
+        <div class="table_cell" id="7,2"></div>
+        <div class="table_cell" id="8,2"></div>
+        <div class="table_cell" id="9,2"></div>
+        <div class="table_cell" id="10,2"></div>
+        <div class="table_cell" id="11,2"></div>
+        <div class="table_cell" id="12,2"></div>
+        <div class="table_cell" id="13,2"></div>
+        <div class="table_cell" id="0,3"></div>
+        <div class="table_cell" id="1,3"></div>
+        <div class="table_cell" id="2,3"></div>
+        <div class="table_cell" id="3,3"></div>
+        <div class="table_cell" id="4,3"></div>
+        <div class="table_cell" id="5,3"></div>
+        <div class="table_cell" id="6,3"></div>
+        <div class="table_cell" id="7,3"></div>
+        <div class="table_cell" id="8,3"></div>
+        <div class="table_cell" id="9,3"></div>
+        <div class="table_cell" id="10,3"></div>
+        <div class="table_cell" id="11,3"></div>
+        <div class="table_cell" id="12,3"></div>
+        <div class="table_cell" id="13,3"></div>
+        <div class="table_cell" id="0,4"></div>
+        <div class="table_cell" id="1,4"></div>
+        <div class="table_cell" id="2,4"></div>
+        <div class="table_cell" id="3,4"></div>
+        <div class="table_cell" id="4,4"></div>
+        <div class="table_cell" id="5,4"></div>
+        <div class="table_cell" id="6,4"></div>
+        <div class="table_cell" id="7,4"></div>
+        <div class="table_cell" id="8,4"></div>
+        <div class="table_cell" id="9,4"></div>
+        <div class="table_cell" id="10,4"></div>
+        <div class="table_cell" id="11,4"></div>
+        <div class="table_cell" id="12,4"></div>
+        <div class="table_cell" id="13,4"></div>
+    </div>
+</body>
+</html>
