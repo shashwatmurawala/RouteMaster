@@ -5,3 +5,4 @@ cockroach-sql
 .DS_Store
 
 replit.nix
+.replit
