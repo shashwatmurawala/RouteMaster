@@ -12,3 +12,14 @@ class User(BaseModel):
 
 class UserInDB(User):
     password_hash: str
+  
+class Plan(BaseModel):
+  major: str
+  minors: Optional[List[str]]
+  faculty: str
+  program: str
+  coop: bool = False
+  sequence: Optional[int]
+  university: str
+  
+  

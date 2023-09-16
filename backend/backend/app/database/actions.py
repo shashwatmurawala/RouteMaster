@@ -30,9 +30,13 @@ def get_user_by_username(
     if db is None:
         db = next(conn_provider())
 
-    user = MockData.get_user_by_username(username)
+    result = db.execute(
+        "SELECT * FROM users WHERE username = %s;", (username,)
+      ).fetchone()
+    if result is None:
+        return result
+    user = UserInDB.parse_obj(result)
     return user
-
 
 def get_users(db: Connection) -> list[User]:
     return MockData.get_users()
@@ -41,26 +45,54 @@ def get_users(db: Connection) -> list[User]:
 def get_user_by_id(user_id: str, db: Connection) -> User:
     return MockData.get_user_by_id(user_id)
 
+def get_courses(major: str, db: Connection) -> List[str]:
+    
 
 def create_user(newUser: UserRegister, db: Connection) -> User:
     password_hash = hash_password(newUser.password)
-    user = MockData.create_user(
-        UserInDB(
-            username=newUser.username,
-            full_name=newUser.full_name,
-            password_hash=password_hash,
-        )
-    )
-    return user
+    id = db.execute(
+        """
+        INSERT INTO users (username, password_hash, full_name)
+        VALUES (%s, %s, %s)
+        RETURNING id;
+        """,
+        (newUser.username, password_hash, newUser.full_name),
+    ).fetchone()["id"]
+    return User(id=id, username=newUser.username, full_name=newUser.full_name)
 
 
 def update_user(user_id: str, user: UserUpdate, db: Connection) -> User:
+    user_id = UUID(user_id)
     if user.password is not None:
         user.password_hash = hash_password(user.password)
         user.password = None
-    user = MockData.update_user(user_id, user)
-    return user
+    user_dict = user.dict(exclude_none=True)
+    query = sql.SQL("UPDATE users SET {data} WHERE id={id};").format(
+        data=sql.SQL(", ").join(
+            sql.Composed([sql.Identifier(k), sql.SQL(" = "), sql.Placeholder(k)])
+            for k in user_dict.keys()
+        ),
+        id=user_id,
+    )
+    db.execute(query, user_dict)
+    user = get_user_by_id(user_id, db)
+    return
+
 
 
 def delete_user(user_id: str, db: Connection):
     return MockData.delete_user(user_id)
+
+def extract_names(courses: str):
+    return str.split(",")
+
+def generate_plan(str:major, db: Connection, coop: bool, sequence: Optional[int]): 
+  
+
+  
+
+  
+  
+
+
+  return json xd

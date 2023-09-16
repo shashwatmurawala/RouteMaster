@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "repl-nix-htn-project-1"
+version = "0.1.0"
+description = ""
+authors = ["Replit user <<>>"]
+readme = "README.md"
+packages = [{include = "repl_nix_htn_project_1"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.103.1"
+fastapi-login = "^1.9.1"
+psycopg = "^3.1.10"
+psycopg-pool = "^3.1.7"
+pydantic = "^2.3.0"
+uvicorn = "^0.23.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
