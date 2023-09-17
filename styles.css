@@ -94,7 +94,7 @@ body {
   margin-left: 1vw;
   margin-right: 1vw;
   display: grid;
-  grid-template-columns: repeat(14, 1fr);
+  grid-template-columns: repeat(15, 1fr);
   grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 4px;
   grid-row-gap: 4px;
