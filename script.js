@@ -20,6 +20,6 @@ function update_table() {
 
 function run_algo() {
     console.log("ran");
-
+    // add algorithym here
     update_table();
 }
