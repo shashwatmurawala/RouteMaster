@@ -33,7 +33,7 @@ var courses;
 var majorcourses;
 (async () => {
     try {
-      majorcourses = await sequelize.query("SELECT courses FROM majors");
+      majorcourses = await sequelize.query("SELECT courses FROM majors"); // add major
       console.log(majorcourses);
     } catch (err) {
       console.error("error executing query:", err);
@@ -115,7 +115,7 @@ const checkPrereq = function(course) {//check if course is in taken
 
 var courseSchedule = [];
 
-for (var j = 0; j <= 13; j++) {
+for (var j = 0; j <= 7; j++) {
     var termCourses = []; //can't use json in the middle so we make a nested array then convert to json at the end
     var count = 0;//4 major courses per term
     for (const value of available) {//remove 4 course from available ones and put them in taken.
@@ -153,6 +153,7 @@ for (var j = 0; j <= 13; j++) {
 
 //++============ CONVERT courseSchedule to JSON HERE PLEASE THEN DO WHATEVER WITH IT
 
+console.log(courseSchedule);
 
 
 
