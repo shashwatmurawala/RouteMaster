@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "sequelize": "^6.33.0",
+    "sequelize-cockroachdb": "^6.0.5"
+  }
+}
