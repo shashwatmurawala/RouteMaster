@@ -12,7 +12,7 @@ function update_table() {
     for (let i = 0; i < 14; i++) {
         for (let j = 0; j < 5; j++) {
             index = i + "," + j;
-            console.log(index);
+            // console.log(index);
             document.getElementById(index).innerHTML = data[index];
         }
     }
@@ -20,6 +20,10 @@ function update_table() {
 
 function run_algo() {
     console.log("ran");
+    let seq = document.getElementById("Coop");
+    let major = document.getElementById("Maj");
+    console.log(seq.value);
+    console.log(major.value);
     // add algorithym here
     update_table();
 }
