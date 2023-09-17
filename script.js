@@ -1,5 +1,5 @@
 import data from './test.json' assert { type: 'json' };
-// import { Sequelize } from './backend/node_modules/sequelize-cockroachdb';
+import { Sequelize } from './backend/node_modules/sequelize-cockroachdb';
 console.log(data);
 console.log(data['0,0']);
 
