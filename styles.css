@@ -1,10 +1,7 @@
-
 body {
-    font-family: 'Roboto';font-size: 18px;
-}
-
-body {
-  background-color: #7da7e7;
+  font-family: "Roboto";
+  font-size: 18px;
+  background-color: #e7ecff;
 }
 
 /* Add a black background color to the top navigation */
@@ -13,25 +10,26 @@ body {
   overflow: hidden;
 }
 
-.topnav p {
-  /* float: center; */
-  margin-right: 250px;
-  color: #f2f2f2;
-  text-align: center;
-  text-decoration: none;
-  font-size: 36px;
-  color: #37447E;
-  font-weight: bolder;
-}
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 25px 45px;
   text-decoration: none;
   font-size: 17px;
+  color: #505f98;
+}
+
+.title {
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 48px;
+  color: #37447e;
+  font-weight: bold;
+  margin-top: -20px;
 }
 
 /* Change the color of links on hover */
@@ -47,8 +45,11 @@ body {
 }
 
 #butt {
+  font-family: "Montserrat";
   margin: auto;
   padding: 10px;
+  background-color: #7da7e7;
+  border-radius: 5px;
 }
 
 #button {
@@ -99,11 +100,19 @@ body {
 }
 
 .dropdown {
-    padding: 10px;
-    border-radius: 10px;
-    border: 1
+  font-family: "Montserrat";
+  font-size: 20px;
+  padding: 5px;
 }
+
+.dropdown p {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+}
+
 .dropdown-menu {
-    padding: 10px; /* Adjust the padding as needed */
-  }
-  
+  background-color: #7da7e7;
+  padding: 12px; /* Adjust the padding as needed */
+  border-radius: 5px;
+}
