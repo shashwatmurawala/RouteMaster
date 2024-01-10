@@ -1,24 +1,49 @@
-Inspiration
-Our project was born out of the frustration experienced during course selections when students constantly worry about whether they are on the right track to graduate in their chosen major, specialization, or minor. Navigating the confusing and complex undergraduate course calendar, filled with courses having multiple prerequisites, anti-requisites, specific term offerings, and restricted sequences, can be a daunting task. One of our team members, Shashwat, faced an especially challenging journey as he pursued multiple specializations and minors, struggling to fully comprehend the requirements.
+# RouteMaster
 
-What it does
-RouteMaster is a comprehensive solution that leverages the power of the Cockroachlab database to simplify the course planning process. Initially designed for the Bachelor of Mathematics program, it demonstrates the feasibility of our approach. Here's how it works:
+## Inspiration
+RouteMaster was inspired by the difficulties students face during course selection, particularly in aligning with the requirements for their majors, specializations, or minors. Our team member Shashwat's challenges in navigating multiple specializations and minors highlighted the need for a streamlined solution.
 
-Database Integration: RouteMaster utilizes the Cockroachlab DB to store math-related courses and their major requirements, hosting a sophisticated algorithm for course planning.
+## What It Does
+RouteMaster is a comprehensive tool developed to simplify the course planning process, leveraging the Cockroachlab database. Initially tailored for the Bachelor of Mathematics program, it demonstrates the feasibility of extending this solution to other programs and universities.
 
-User Input: Users begin by selecting their desired major/specialization and co-op sequence. While our current implementation is tailored for the Bachelor of Mathematics program, our vision extends to other programs and universities.
+### Features
+- **Database Integration:** RouteMaster employs the Cockroachlab DB to manage math-related courses and their major requirements, supported by a sophisticated algorithm for course planning.
+- **User Input:** Users can select their desired major/specialization and co-op sequence, with a vision to expand this feature to encompass more programs and universities.
+- **Algorithmic Magic:** The core algorithm extracts necessary courses for a chosen major, organizes them based on prerequisites, and creates a personalized course path for optimized scheduling.
 
-Algorithmic Magic: Our algorithm extracts all the necessary courses for the chosen major, identifies their prerequisites from the extensive course list, and organizes a personalized course path. The system strives for an optimized schedule, often front-loading the workload and lightening it in later years.
+## How We Built It
+RouteMaster was developed using a multi-tiered approach:
 
-How we built it
-We employed a multi-tiered approach to build RouteMaster:
+- **Backend:** Leveraging the Cockroachlab DB as the backbone, it houses data and the algorithm, crafted with JavaScript and SQL.
+- **Frontend:** A blend of HTML, CSS, and JavaScript forms the user interface, seamlessly connected to the backend.
+- **Data Collection:** The process began by scraping the math undergraduate calendar to extract vital course information.
+- **Data Integration:** Scraped data was uploaded into Cockroach DB, forming the foundation for the algorithm.
+- **Data Presentation:** The algorithm outputs course plans to a JSON file, read and displayed by the frontend.
 
-Backend: The Cockroachlab DB serves as the backbone, housing both data and the algorithm, which is crafted using JavaScript and SQL.
+## Challenges We Ran Into
+- **Last-Minute Pivot:** Initially planned to work with ADHawk technologies, we shifted to this project due to hardware allocation issues.
+- **Web Scraping Complexities:** Extracting detailed course data presented challenges, particularly for courses with intricate requirements.
+- **Algorithmic Puzzles:** Developing an efficient algorithm for course assignment and optimal term planning was a significant challenge.
 
-Frontend: The user interface is a blend of HTML, CSS, and JavaScript, seamlessly connected to the backend database.
+## Accomplishments That We're Proud Of
+- **Tech Learning:** Successfully implemented Cockroach DB for data hosting.
+- **Web Scraping Mastery:** Gained valuable experience in data extraction.
+- **Automated Course Planning:** Developed an algorithm for automatic course calendar population.
 
-Data Collection: We began by scraping the math undergraduate calendar, extracting vital information like course prerequisites, alternative prerequisites, specific degree requirements, and more.
+## What We Learned
+- **Database Management:** Skills in hosting data on an online database and utilizing SQL for integration.
+- **Complex Algorithms:** Experience in designing efficient and comprehensive algorithms.
 
-Data Integration: This scraped data was then uploaded into Cockroach DB, forming the basis for our algorithm's operation.
+## What's Next for RouteMaster
+- **Algorithm Refinement:** Continual improvement for better course load distribution.
+- **Expansion:** Extending functionality to other universities and programs.
+- **Frontend Enhancement:** Updating the UI to align with Figma mockups for improved user experience.
 
-Data Presentation: The algorithm outputs course plans to a JSON file, which the frontend reads and displays to the user.
+## Built With
+- CockroachDB
+- CSS
+- HTML
+- JavaScript
+- Python
+- SQL
+- web-scrape-master
